@@ -1,0 +1,15 @@
+1.web.xml的配置必须要有顺序，而且要将基本的内容配置全，主要是导入的class类和对应的spring配置文件的路径信息不要出错。
+2.集成spring.xml和springmvc.xml的配置，要将基础的spring配置要素配置全，并且将spring的运行条件配置完成后，可以先启动服务测试
+spring是否可以正常运行，然后再配置测试shiro可以减少很多不确定因素的发生。
+3.配置shiro时要注意导入的包的类是否正确，比如将org.apache.shiro.web.mgt.DefaultWebSecurityManager，错误的配置成
+org.apache.shiro.web.mgt.DefaultSecurityManager就无法显示正常的内容，而且很难发现有什么问题，就是正常的访问都无法实现，
+错误的以为是服务器出错了，经过多次检查才发现原来是导入的包不对。
+4.要对CustomRealm的构建要了解清楚，这个里面的配置都没有与数据库连接，里面的测试数据都是使用Set集合来模拟实现的，后期需要再使用
+数据库来实现。
+5.就是要对每个细节仔细分析，出现问题时要从最小内容（核心）开始进行排错检查。这样可以减少不必要的工作，减少时间的浪费。
+6.当使用jdbcTemplate从数据库中取值时，在new RowMapper中取值时，要记得按列的数字取值是要从 1 开始，而不 0。否则会出现错误
+提示：org.springframework.jdbc.support.SQLErrorCodesFactory.<init> SQLErrorCodes loaded:
+7.当使用redis进行session缓存管理时，在应用时必须要启动对应的redis服务器才可以。如果不启动redis服务则会报无法获取的错误。
+JedisConnectionException: Could not get a resource from the pool 这个很重要必须要注意。
+8.redis的启动和关闭命令 redis-server,redis-cli shutdown
+9.这个系统现在已经和redis服务相关联，要认证成功必须要先启动redis服务器才可以。

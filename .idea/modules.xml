@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ShiroTestHasRole/ShiroTestHasRole.iml" filepath="$PROJECT_DIR$/ShiroTestHasRole/ShiroTestHasRole.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShiroTestHelloWorld/ShiroTestHelloWorld.iml" filepath="$PROJECT_DIR$/ShiroTestHelloWorld/ShiroTestHelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iMooc-shiro/imooc-shiro.iml" filepath="$PROJECT_DIR$/iMooc-shiro/imooc-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shiro-Web/shiro-web.iml" filepath="$PROJECT_DIR$/Shiro-Web/shiro-web.iml" />
+    </modules>
+  </component>
+</project>
